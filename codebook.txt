@@ -1,0 +1,103 @@
+File produced by run_analysis.R is a modification of Human Activity Recognition Using Smartphones Dataset Version 1.0
+
+This file contains average of each variable for each activity and each subject.
+
+------------------------------------
+How the file was reate.
+
+To create the file following chanes and operationswa done using files from oryginal data set and its codebook files:
+
+Data from test/X_test.txt and train/X_train.txt were fitered to contain only columns concearning means. features_info.txt file was used to determine which columns contain mean values.
+
+After filtering Activity Labels were added to test and train filtered data using train/y_test.txt and train/y_test.txt files.  These data were added as the first column. Thereafter Subject ID data were aded , again as first column using test/subject_test.txt and train/subject_train.txt.
+
+Those new sets of test and train data were merged into one file.
+
+Names were aded to this new data set. First two collumn were named: Activity_Label, Subject_ID. Rest of the columns were named based on names in features.txt (only names for mean values selcted as described above). The names were changed using following rules: all dash characters were changed to underscore, all parenthesis were removed, all spaes were removed (tBodyAcc-mean()-X becomes tBodyAcc_mean_Y)
+
+Base on this file new tidy data set with the average of each variable for each activity and each subject was created.
+
+------------------------------------
+Columns names
+
+Activity_Label - lebels from activity_labels.txt (added by using train/y_test.txt and train/y_test.txt)
+Subject_ID - Subject ID added from test/subject_test.txt and train/subject_train.txt
+tBodyAcc_mean_X - tBodyAcc-mean()-X (all subsequent columns are names from features.txt converted as described in previous setion)
+tBodyAcc_mean_Y
+tBodyAcc_mean_Z
+tBodyAcc_std_X
+tBodyAcc_std_Y
+tBodyAcc_std_Z
+tGravityAcc_mean_X
+tGravityAcc_mean_Y
+tGravityAcc_mean_Z
+tGravityAcc_std_X
+tGravityAcc_std_Y
+tGravityAcc_std_Z
+tBodyAccJerk_mean_X
+tBodyAccJerk_mean_Y
+tBodyAccJerk_mean_Z
+tBodyAccJerk_std_X
+tBodyAccJerk_std_Y
+tBodyAccJerk_std_Z
+tBodyGyro_mean_X
+tBodyGyro_mean_Y
+tBodyGyro_mean_Z
+tBodyGyro_std_X
+tBodyGyro_std_Y
+tBodyGyro_std_Z
+tBodyGyroJerk_mean_X
+tBodyGyroJerk_mean_Y
+tBodyGyroJerk_mean_Z
+tBodyGyroJerk_std_X
+tBodyGyroJerk_std_Y
+tBodyGyroJerk_std_Z
+tBodyAccMag_mean
+tBodyAccMag_std
+tGravityAccMag_mean
+tGravityAccMag_std
+tBodyAccJerkMag_mean
+tBodyAccJerkMag_std
+tBodyGyroMag_mean
+tBodyGyroMag_std
+tBodyGyroJerkMag_mean
+tBodyGyroJerkMag_std
+fBodyAcc_mean_X
+fBodyAcc_mean_Y
+fBodyAcc_mean_Z
+fBodyAcc_std_X
+fBodyAcc_std_Y
+fBodyAcc_std_Z
+fBodyAcc_meanFreq_X
+fBodyAcc_meanFreq_Y
+fBodyAcc_meanFreq_Z
+fBodyAccJerk_mean_X
+fBodyAccJerk_mean_Y
+fBodyAccJerk_mean_Z
+fBodyAccJerk_std_X
+fBodyAccJerk_std_Y
+fBodyAccJerk_std_Z
+fBodyAccJerk_meanFreq_X
+fBodyAccJerk_meanFreq_Y
+fBodyAccJerk_meanFreq_Z
+fBodyGyro_mean_X
+fBodyGyro_mean_Y
+fBodyGyro_mean_Z
+fBodyGyro_std_X
+fBodyGyro_std_Y
+fBodyGyro_std_Z
+fBodyGyro_meanFreq_X
+fBodyGyro_meanFreq_Y
+fBodyGyro_meanFreq_Z
+fBodyAccMag_mean
+fBodyAccMag_std
+fBodyAccMag_meanFreq
+fBodyBodyAccJerkMag_mean
+fBodyBodyAccJerkMag_std
+fBodyBodyAccJerkMag_meanFreq
+fBodyBodyGyroMag_mean
+fBodyBodyGyroMag_std
+fBodyBodyGyroMag_meanFreq
+fBodyBodyGyroJerkMag_mean
+fBodyBodyGyroJerkMag_std
+fBodyBodyGyroJerkMag_meanFreq
