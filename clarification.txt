@@ -1,1 +1,1 @@
-README.txt was changed to README.md - you should grade the prject with README.txt
+README.txt was changed to README.md - you should grade the project with README.txt
